@@ -5,7 +5,7 @@
     <?
     global $APPLICATION;
     $APPLICATION->ShowHead();
-    $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/system/head.php", [], ["SHOW_BORDER" => false]);
+    $APPLICATION->IncludeFile("/local/include/system/head.php", [], ["SHOW_BORDER" => false]);
 
     // Настройки++ (Удобная утилита для хранения одиночных свойств)
     // !!!!! Не забудьте установить модуль Настройки++ !!!!!!
@@ -23,8 +23,8 @@
 </head>
 <body>
 <div class="wrapper">
-    <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/system/scripts_after_body.php", [], ["SHOW_BORDER" => false]); ?>
+    <? $APPLICATION->IncludeFile("/local/include/system/scripts_after_body.php", [], ["SHOW_BORDER" => false]); ?>
     <? $APPLICATION->ShowPanel(); ?>
-    <? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/system/header.php", [], ["SHOW_BORDER" => false]); ?>
+    <? $APPLICATION->IncludeFile("/local/include/system/header.php", [], ["SHOW_BORDER" => false]); ?>
     <div class="content">
 <main>

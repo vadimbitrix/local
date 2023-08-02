@@ -14,9 +14,9 @@ $test = Option::get("askaron.settings", "UF_TEST");
 
 ?>
 </div> <!-- content -->
-<? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/system/footer.php", [], ["SHOW_BORDER" => false]); ?>
-<? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/system/popup.php", [], ["SHOW_BORDER" => false]); ?>
-<? $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/system/scripts_before_body.php", [], ["SHOW_BORDER" => false]); ?>
+<? $APPLICATION->IncludeFile("/local/include/system/footer.php", [], ["SHOW_BORDER" => false]); ?>
+<? $APPLICATION->IncludeFile("/local/include/system/popup.php", [], ["SHOW_BORDER" => false]); ?>
+<? $APPLICATION->IncludeFile("/local/include/system/scripts_before_body.php", [], ["SHOW_BORDER" => false]); ?>
 </div> <!-- wrapper -->
 </body>
 </html>
