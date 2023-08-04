@@ -43,6 +43,7 @@ Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="1024x1024" 
 Asset::getInstance()->addString('<link rel="yandex-tableau-widget" href="/favicons/yandex-browser-manifest.json">', true, 'BEFORE_CSS');
 /*FONTS*/
 Asset::getInstance()->addString('<link rel="preconnect" href="https://fonts.gstatic.com">', true, 'BEFORE_CSS');
+Asset::getInstance()->addString('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>', true, 'BEFORE_CSS');
 Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&amp;family=Open+Sans:wght@300;400;700&amp;display=swap" rel="stylesheet">', true, 'BEFORE_CSS');
 /*CSS*/
 Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/name_file.min.css", true);
