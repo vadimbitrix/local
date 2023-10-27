@@ -32,4 +32,7 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-
+.history/
+.vscode/*
+!.vscode/extensions.json
+/bitrix
