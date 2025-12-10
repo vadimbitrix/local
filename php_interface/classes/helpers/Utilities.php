@@ -1,6 +1,6 @@
 <?php
 
-namespace VV;
+namespace Vadim24\Helpers;
 
 class Utilities {
     /**

@@ -9,7 +9,9 @@
  *
  */
 
-namespace VV;
+namespace Vadim24\Lib;
+
+use \Exception;
 
 class CURL {
     private $ch;

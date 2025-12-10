@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Vadim24\Cron;
 
 class Agents
 {

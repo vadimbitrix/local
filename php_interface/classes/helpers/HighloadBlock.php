@@ -6,7 +6,7 @@
  * @version 1.0.5
  */
 
-namespace VV;
+namespace Vadim24\Helpers;
 
 use \Bitrix\Highloadblock as HL,
     \Bitrix\Main\Entity,
