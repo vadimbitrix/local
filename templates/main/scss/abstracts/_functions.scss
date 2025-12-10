@@ -1,0 +1,45 @@
+// =============================================================================
+// SCSS ФУНКЦИИ
+// =============================================================================
+
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:color';
+
+// Конвертация px в rem
+@function rem($pixels, $base: 16px) {
+  @return math.div($pixels, $base) * 1rem;
+}
+
+// Конвертация px в em
+@function em($pixels, $base: 16px) {
+  @return math.div($pixels, $base) * 1em;
+}
+
+// Вычисление контрастного цвета
+@function contrast-color($color) {
+  @if color.lightness($color) > 50% {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Генерация rgba из hex
+@function hex-to-rgba($hex, $alpha: 1) {
+  @return rgba($hex, $alpha);
+}
+
+// Получение значения из карты с fallback
+@function get($map, $key, $fallback: null) {
+  @if map.has-key($map, $key) {
+    @return map.get($map, $key);
+  } @else {
+    @if $fallback {
+      @return $fallback;
+    } @else {
+      @warn "Ключ #{$key} не найден в карте";
+      @return null;
+    }
+  }
+}

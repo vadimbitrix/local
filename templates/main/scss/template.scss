@@ -1,0 +1,41 @@
+// =============================================================================
+// ГЛАВНЫЙ ФАЙЛ ШАБЛОНА
+// =============================================================================
+
+@use 'sass:map';
+// Импорты abstracts (переменные, миксины, функции)
+@use 'abstracts' as *;
+
+// Базовые стили
+@use 'base';
+@use 'vendors';
+@use "components/header";
+@use "components/popup";
+@use "components/cookie-notification";
+@use "components/info-accordion";
+@use "components/not-found";
+@use "components/footer";
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: z-index(modal-backdrop);
+  opacity: 0;
+  visibility: hidden;
+  @include transition(opacity);
+  transition-property: opacity, visibility;
+  transition-delay: 0s, 0.3s;
+  &.is-active-mobile {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+}
+.bx-component {
+  @include bitrix-component();
+}

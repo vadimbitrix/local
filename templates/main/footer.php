@@ -18,5 +18,6 @@ $test = Option::get("askaron.settings", "UF_TEST");
 <? $APPLICATION->IncludeFile("/local/include/system/popup.php", [], ["SHOW_BORDER" => false]); ?>
 <? $APPLICATION->IncludeFile("/local/include/system/scripts_before_body.php", [], ["SHOW_BORDER" => false]); ?>
 </div> <!-- wrapper -->
+<div class="backdrop" aria-hidden="true"></div>
 </body>
 </html>

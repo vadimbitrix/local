@@ -1,6 +1,18 @@
 # Node artifact files
 node_modules/
 dist/
+/bitrix/*
+!/bitrix/modules/
+/bitrix/modules/*
+!/bitrix/modules/modulbank.payments/
+/local/templates/main/components/**/*.css
+/local/templates/main/template_styles.css
+/local/templates/main/template_styles.min.css
+/local/templates/main/styles.css
+/local/templates/main/styles.min.css
+**/vue-component/*.js
+/local/templates/main/.bitrix-build/
+upload/
 
 # Log files
 *.log

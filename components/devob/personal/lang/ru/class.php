@@ -1,0 +1,13 @@
+<?php
+$MESS['DEVOB_PERSONAL_NAV_MAIN'] = 'Аккаунт';
+$MESS['DEVOB_PERSONAL_NAV_ORDERS'] = 'Мои заказы';
+$MESS['DEVOB_PERSONAL_NAV_FAVORITES'] = 'Избранные товары';
+$MESS['DEVOB_PERSONAL_PAGE_TITLE_MAIN'] = 'Личный кабинет';
+$MESS['DEVOB_PERSONAL_PAGE_TITLE_EDIT'] = 'Личные данные';
+$MESS['DEVOB_PERSONAL_PAGE_TITLE_ORDERS'] = 'Мои заказы';
+$MESS['DEVOB_PERSONAL_PAGE_TITLE_FAVORITES'] = 'Избранные товары';
+$MESS['DEVOB_PERSONAL_USER_NOT_FOUND'] = 'Пользователь не найден.';
+$MESS['DEVOB_PERSONAL_SAVE_ERROR'] = 'Не удалось сохранить данные профиля.';
+$MESS['DEVOB_PERSONAL_ORDER_PAYMENT_STATUS_WAIT'] = 'Ожидает оплату';
+$MESS['DEVOB_PERSONAL_ORDER_PAYMENT_STATUS_PAID'] = 'Оплачен';
+$MESS['DEVOB_PERSONAL_ORDER_PAYMENT_STATUS_PARTIAL'] = 'Оплачен частично';

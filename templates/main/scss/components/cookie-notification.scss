@@ -1,0 +1,156 @@
+@use '../abstracts' as *;
+.cookie-notification {
+  position: fixed;
+  bottom: spacing(8);
+  left: spacing(8);
+  right: spacing(8);
+  z-index: z-index(popup);
+  max-width: 47rem;
+  @include media(md){
+    left: auto;
+    right: spacing(5);
+  }
+  @include media(lg, max){
+    bottom: 8rem;
+  }
+  @include media(md, max){
+    left: auto;
+    right: auto;
+    margin: 0 spacing(4);
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &__container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: spacing(3);
+    box-shadow: 0 spacing(2) spacing(8) rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    padding: spacing(6);
+    animation: slideUpCookie 0.3s ease-out;
+  }
+
+  &__close {
+    position: absolute;
+    top: spacing(1);
+    right: spacing(1);
+    width: spacing(8);
+    height: spacing(8);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: spacing(2);
+    border-radius: 50%;
+    @include flex(row, center, center);
+  }
+
+  &__close-icon {
+    font-size: spacing(6);
+    line-height: 1;
+    color: color(dark);
+    display: block;
+    @include transition(color);
+  }
+
+  &__content {
+    padding-right: spacing(4);
+  }
+
+  &__text {
+    font-size: font-size(xs);
+    color: color(dark);
+    margin: 0 0 spacing(4) 0;
+    line-height: 1.5;
+  }
+
+  &__link {
+    color: color(dark);
+    text-decoration: underline;
+    @include transition(color);
+    &:hover{
+      color: color(primary-700);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: spacing(3);
+    flex-wrap: wrap;
+
+    @include media(sm, max){
+      flex-direction: column;
+    }
+  }
+
+  &__button {
+    padding: spacing(3) spacing(8);
+    border-radius: spacing(1);
+    font-size: spacing(14);
+    font-weight: 500;
+    cursor: pointer;
+    @include transition(all);
+    border: 1px solid transparent;
+    white-space: nowrap;
+
+    @include media(sm, max){
+      width: 100%;
+    }
+
+    &--primary {
+      background-color: color(primary-700);
+      color: color(dark);
+      border-color: color(primary-700);
+
+      &:hover {
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+
+    &--secondary {
+      background-color: transparent;
+      color: color(dark);
+      border-color: color(secondary-300);
+
+      &:hover {
+        background-color: color(light);
+        border-color: color(secondary-400);
+      }
+    }
+  }
+}
+.cookie-notification__close:hover .cookie-notification__close-icon{
+  color: color(danger);
+}
+@keyframes slideUpCookie {
+  from {
+    opacity: 0;
+    transform: translateY(spacing(8));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cookie-notification--hiding {
+  animation: slideDownCookie 0.3s ease-in forwards;
+}
+
+@keyframes slideDownCookie {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(spacing(8));
+  }
+}

@@ -6,7 +6,8 @@ Loader::registerAutoLoadClasses(null, [
     'Vadim24\\Helpers\\Text' => '/local/php_interface/classes/helpers/Text.php',
     'Vadim24\\Lib\\Bitrix24Client' => '/local/php_interface/classes/lib/Bitrix24Client.php',
     'Vadim24\\Lib\\CURL' => '/local/php_interface/classes/lib/CURL.php',
-    'Vadim24\\Cron\\Agents' => '/local/php_interface/classes/cron/Agents.php'
+    'Vadim24\\Cron\\Agents' => '/local/php_interface/classes/cron/Agents.php',
+    'Vadim24\\Lib\\Builder\\VueComponentLoader' => '/local/php_interface/classes/lib/VueComponentLoader.php',
 ]);
 
 // Если есть composer

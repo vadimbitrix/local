@@ -1,0 +1,71 @@
+@use '../abstracts' as *;
+.popup{
+  &-contacts {
+    &__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: spacing(4);
+      margin-bottom: spacing(6);
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: spacing(3);
+    }
+
+    &__icon {
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      path{
+        @include transition(stroke);
+      }
+    }
+
+    &__link {
+      @include flex(row, flex-start, center);
+      font-size: 1rem;
+      gap: spacing(2);
+      color: color(dark);
+      text-decoration: none;
+      @include transition(color);
+      &:hover {
+        text-decoration: none;
+        color: color(primary);
+        .popup-contacts__icon path{
+          stroke: color(primary);
+        }
+      }
+    }
+    &__text {
+      @include flex(row, flex-start, center);
+      gap: spacing(2);
+      font-size: 1rem;
+      color: color(dark);
+    }
+
+    &__button {
+      @include flex(row, center, center);
+      gap: spacing(3);
+      width: 100%;
+      padding: spacing(2);
+      font-size: 1rem;
+      font-family: $font-family-sans;
+      font-weight: 500;
+      color: #fff;
+      background-color: color(primary);
+      border: none;
+      border-radius: spacing(2);
+      cursor: pointer;
+      @include transition(background-color);
+
+      &:hover {
+        background-color: color(primary);
+      }
+    }
+  }
+}

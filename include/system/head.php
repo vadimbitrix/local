@@ -25,31 +25,29 @@ Asset::getInstance()->addString('<meta name="msapplication-TileImage" content="/
 Asset::getInstance()->addString('<meta name="msapplication-config" content="/favicons/browserconfig.xml">', true, 'BEFORE_CSS');
 /*FAVICON*/
 Asset::getInstance()->addString('<link rel="shortcut icon" href="/favicons/favicon.ico">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="manifest" href="/favicons/manifest.json">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="16x16" href="/favicons/apple-touch-icon-16x16.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="32x32" href="/favicons/apple-touch-icon-32x32.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="48x48" href="/favicons/apple-touch-icon-48x48.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="167x167" href="/favicons/apple-touch-icon-167x167.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="1024x1024" href="/favicons/apple-touch-icon-1024x1024.png">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="yandex-tableau-widget" href="/favicons/yandex-browser-manifest.json">', true, 'BEFORE_CSS');
-/*FONTS*/
-Asset::getInstance()->addString('<link rel="preconnect" href="https://fonts.gstatic.com">', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>', true, 'BEFORE_CSS');
-Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&amp;family=Open+Sans:wght@300;400;700&amp;display=swap" rel="stylesheet">', true, 'BEFORE_CSS');
+Asset::getInstance()->addString('<link rel="shortcut icon" sizes="96x96" href="/favicons/favicon-96x96.png">', true, 'BEFORE_CSS');
+Asset::getInstance()->addString('<link rel="shortcut icon" sizes="192x192" href="/favicons/web-app-manifest-192x192.png">', true, 'BEFORE_CSS');
+Asset::getInstance()->addString('<link rel="shortcut icon" sizes="512x512" href="/favicons/web-app-manifest-512x512.png">', true, 'BEFORE_CSS');
+Asset::getInstance()->addString('<link rel="shortcut icon" href="/favicons/favicon.svg">', true, 'BEFORE_CSS');
+Asset::getInstance()->addString('<link rel="manifest" href="/favicons/webmanifest.json">', true, 'BEFORE_CSS');
+Asset::getInstance()->addString('<link rel="apple-touch-icon" sizes="16x16" href="/favicons/apple-touch-icon.png">', true, 'BEFORE_CSS');
 /*CSS*/
-Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/name_file.min.css", true);
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/libs/swiper/swiper-bundle.min.css", true);
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/libs/fancybox/fancybox.min.css", true);
 /*JS*/
 CJSCore::Init(['fx','bx', 'jquery3']);
-Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/name_file.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/libs/vue/vue3.5.21.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/phone-mask.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/libs/fancybox/fancybox.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/libs/swiper/swiper-bundle.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/libs/pinia/pinia.prod.min.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/init.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/popup.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/cookie-notification.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/info-accordion.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/select-city.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/stores/cart.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/stores/favorites.js");
 // Микроразметка
 ob_start();
 include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/json.php';

@@ -1,0 +1,52 @@
+// =============================================================================
+// ОБЩИЕ СТИЛИ ДЛЯ ВСЕХ ШАБЛОНОВ
+// =============================================================================
+
+@use 'sass:map';
+@use 'abstracts' as *;
+
+// Общие утилиты
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.d-none { display: none; }
+.d-block { display: block; }
+.d-flex { display: flex; }
+
+// Spacing утилиты
+@each $name, $value in $spacings {
+  .m-#{$name} { margin: $value; }
+  .mt-#{$name} { margin-top: $value; }
+  .mb-#{$name} { margin-bottom: $value; }
+  .ml-#{$name} { margin-left: $value; }
+  .mr-#{$name} { margin-right: $value; }
+
+  .p-#{$name} { padding: $value; }
+  .pt-#{$name} { padding-top: $value; }
+  .pb-#{$name} { padding-bottom: $value; }
+  .pl-#{$name} { padding-left: $value; }
+  .pr-#{$name} { padding-right: $value; }
+}
+
+// Битрикс специфичные стили
+.bx-core-adm-admin-bar {
+  z-index: map.get($z-indexes, fixed);
+}
+
+// Общие компоненты
+.btn {
+  display: inline-block;
+  padding: spacing(2) spacing(4);
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  @include transition();
+
+  &-primary {
+    @include button-variant(color(primary));
+  }
+
+  &-secondary {
+    @include button-variant(color(secondary-200));
+  }
+}
