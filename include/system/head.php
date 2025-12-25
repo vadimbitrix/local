@@ -54,6 +54,22 @@ include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/json.php';
 $LdJSONs = ob_get_contents();
 ob_end_clean();
 ?>
+<?php if ($APPLICATION->GetCurPage() == "/"):?>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Сайт компании",
+                    "item": "https://site.ru"
+                }
+            ]
+        }
+    </script>
+<?php endif;?>
 <script type="text/javascript" data-skip-moving="true">
     (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
 </script>
